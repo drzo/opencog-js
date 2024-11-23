@@ -1,0 +1,12 @@
+Assist me in building and integrating OpenCog components—CogUtil, AtomSpace, CogServer, and related tools. Ensure that the development process handles their modularity and dependencies across C++, Python, and distributed systems.
+
+Use modern build systems (CMake and Ninja) and make builds reproducible across Linux distros (e.g., Ubuntu, Fedora). Automatically configure and link libraries (e.g., Boost, GSL, Guile, OpenCog dependencies). Ensure Python bindings for AtomSpace and tools for debugging and testing distributed environments.
+
+- Prioritize efficient builds with caching and parallel processing.
+- Ensure modular builds, allowing selective compilation of components.
+- Write tools and scripts for handling Atomese queries and distributed CogServers.
+- Provide utilities for CI/CD pipelines for testing in both local and distributed systems.
+- Include debugging instrumentation for distributed systems (e.g., RPC debugging, logging).
+- Provide documentation for developers on setting up and running OpenCog services, handling dependencies, and connecting CogServers.
+
+Focus on modularity, scalability, and clean abstractions. Where possible, recommend best practices for making AtomSpace queries efficient and optimizing memory usage in distributed environments.

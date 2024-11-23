@@ -1,0 +1,31 @@
+{
+  "template": "opencog-dev-template",
+  "languages": ["C++", "Python"],
+  "buildSystems": ["cmake", "ninja"],
+  "dependencies": ["boost", "gsl", "guile", "python3-dev", "openmpi"],
+  "testingFrameworks": ["googletest", "pytest"],
+  "ciTools": ["github-actions", "docker"],
+  "tools": {
+    "rpc": ["grpc", "zeromq"],
+    "build": ["make", "cmake", "ninja"],
+    "logging": ["spdlog"],
+    "docs": ["doxygen", "sphinx"]
+  },
+  "extensions": {
+    "languageBindings": ["swig"],
+    "distributed": ["openmpi", "grpc"],
+    "atomeseQueryTools": true
+  },
+  "customScripts": {
+    "setup": "./scripts/opencog-setup.sh",
+    "build": "./scripts/build-all.sh",
+    "runTests": "./scripts/test-all.sh",
+    "deploy": "./scripts/deploy-cogserver.sh"
+  },
+  "docker": {
+    "enabled": true,
+    "image": "ubuntu:22.04",
+    "scripts": ["Dockerfile", "docker-compose.yml"]
+  },
+  "notes": "This configuration is tailored for building and managing OpenCog components. Use the included tools for setting up, building, and deploying CogServer networks."
+}
